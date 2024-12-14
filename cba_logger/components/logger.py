@@ -2,8 +2,8 @@ import os
 import sys
 from pathlib import Path
 
-from cba_logger.components.md_common_python.py_common.component_registration import ComponentRegistration
-from cba_logger.components.md_common_python.py_common.logging import HoornLogger, LogType, DefaultHoornLogOutput, \
+from md_common_python.py_common.component_registration import ComponentRegistration
+from md_common_python.py_common.logging import HoornLogger, LogType, DefaultHoornLogOutput, \
 	FileHoornLogOutput
 
 
