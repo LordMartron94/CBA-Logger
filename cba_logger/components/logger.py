@@ -33,8 +33,9 @@ if __name__ == "__main__":
 
 	application_name = args[1]
 	dir = get_log_dir(application_name)
+	root_separator = application_name
 
-	logger = HoornLogger(min_level=LogType.DEBUG, outputs=[DefaultHoornLogOutput(), FileHoornLogOutput(max_logs_to_keep=5, log_directory=Path(dir))])
+	logger = HoornLogger(min_level=LogType.DEBUG, outputs=[DefaultHoornLogOutput(), FileHoornLogOutput(max_logs_to_keep=5, log_directory=Path(dir))], separator_root=root_separator)
 
 	registration = ComponentRegistration(logger, port=50000, component_port=50001)
 	registration.register_logging()
